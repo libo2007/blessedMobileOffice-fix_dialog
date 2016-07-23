@@ -169,7 +169,7 @@ public class SelectPlasmaMachineResultActivity extends BaseActivity implements O
     /*分配设备超时后的对话框*/
     private void showFailDialog(String title, String msg) {
 
-        if (isDestroyed() ||isFinishing()) {
+        if (isFinishing()) {
             return;
         }
         //AlertDialog.Builder normalDialog=new AlertDialog.Builder(getApplicationContext());
@@ -229,7 +229,7 @@ public class SelectPlasmaMachineResultActivity extends BaseActivity implements O
 
     /*分配设备成功后的对话框*/
     private void showSuccesslDialog(String title, String msg) {
-        if (isDestroyed()||isFinishing()) {
+        if (isFinishing()) {
             return;
         }
         //AlertDialog.Builder normalDialog=new AlertDialog.Builder(getApplicationContext());
@@ -260,7 +260,7 @@ public class SelectPlasmaMachineResultActivity extends BaseActivity implements O
     }
 
     private void showProgress(String title, String msg) {
-        if (isDestroyed()||isFinishing()) {
+        if (isFinishing()) {
             return;
         }
         if (allocDevDialog == null) {
@@ -501,7 +501,7 @@ public class SelectPlasmaMachineResultActivity extends BaseActivity implements O
 
     //关闭分配中对话框
     private void disAllocDevDialog() {
-        if (isDestroyed()||isFinishing()) {
+        if (isFinishing()) {
             return;
         }
         if (allocDevDialog != null) {
